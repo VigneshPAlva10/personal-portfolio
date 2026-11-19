@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vignesh P Alva | Software Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -8px rgba(99, 102, 241, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-bold text-xl tracking-tight text-white">
+        <span class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-sm font-mono">&lt;V/&gt;</span>
+        <span>Vignesh<span class="text-indigo-400">.dev</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#journey" class="hover:text-indigo-400 transition-colors">Journey</a>
+        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white transition-colors" title="GitHub Profile">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+        <button onclick="toggleResumeModal(true)" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-indigo-300 bg-indigo-950/60 border border-indigo-800/60 hover:bg-indigo-900/40 transition-colors">
+          View Resume
+        </button>
+        <a href="#contact" class="hidden sm:inline-flex px-4 py-1.5 rounded-lg text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/30 transition-all">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/60 mb-6">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-xs font-medium text-slate-300">Open for Projects & Collaborations</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6">
+        Hi, I'm <span class="gradient-text">Vignesh P Alva</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl mx-auto">
+        Software developer specializing in <strong class="text-white font-semibold">C++</strong> and <strong class="text-white font-semibold">Python</strong>, building responsive modern web applications with <strong class="text-white font-semibold">Next.js</strong> & <strong class="text-white font-semibold">React</strong>. Strong technical and interpersonal communication skills.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+        <a href="#projects" class="px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition-all">
+          Explore Projects →
+        </a>
+        <button onclick="toggleResumeModal(true)" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm transition-all">
+          View Resume
+        </button>
+        <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-900/60 hover:bg-slate-800 text-slate-300 border border-slate-800 font-medium text-sm transition-all">
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Quick Social & Email Bar -->
+      <div class="inline-flex flex-wrap items-center justify-center gap-3 p-2 rounded-2xl bg-slate-900/70 border border-slate-800/80 mb-12">
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-800/80 text-xs font-medium text-slate-200 hover:text-white transition-colors">
+          <span>github.com/VigneshPAlva10</span>
+        </a>
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-slate-800/50 text-xs font-mono text-slate-300">
+          <span>vigneshpalva2007@gmail.com</span>
+          <button onclick="copyEmail()" class="text-indigo-400 hover:text-indigo-300 font-sans font-semibold text-xs ml-1" id="copy-btn">
+            [Copy]
+          </button>
+        </div>
+      </div>
+
+      <!-- Tech highlights strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+        <div class="glass-card p-4 rounded-xl text-left">
+          <p class="text-xs text-slate-400">Core Systems</p>
+          <p class="text-sm font-semibold text-white">C++ (STL, OOP)</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-left">
+          <p class="text-xs text-slate-400">Scripting & Data</p>
+          <p class="text-sm font-semibold text-white">Python</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-left">
+          <p class="text-xs text-slate-400">Frontend Web</p>
+          <p class="text-sm font-semibold text-white">Next.js & React</p>
+        </div>
+        <div class="glass-card p-4 rounded-xl text-left">
+          <p class="text-xs text-slate-400">Key Strength</p>
+          <p class="text-sm font-semibold text-white">Communication</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/60">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-800/40 px-3 py-1 rounded-full">Overview</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">About <span class="gradient-text">Vignesh P Alva</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-5 text-slate-300 leading-relaxed text-base">
+        <p class="text-lg text-slate-200 font-medium">
+          I am a software developer with a rigorous foundation in <span class="text-indigo-400 font-semibold">C++</span> and <span class="text-sky-400 font-semibold">Python</span>, paired with modern responsive web engineering using <span class="text-teal-400 font-semibold">Next.js</span> and <span class="text-indigo-400 font-semibold">React</span>.
+        </p>
+        <p>
+          In <strong class="text-white">C++</strong>, I focus on algorithmic problem solving, memory efficiency, and Object-Oriented design. In <strong class="text-white">Python</strong>, I build rapid automations, file processors, and logic pipelines.
+        </p>
+        <p>
+          Equally important to me is <strong class="text-indigo-300">clear communication</strong>. Whether it's writing clean documentation, discussing architecture, or collaborating in Git workflows, effective communication ensures that code translates into impactful products.
+        </p>
+      </div>
+
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="glass-card p-5 rounded-2xl">
+          <h3 class="text-base font-semibold text-white mb-1">C++ & Python</h3>
+          <p class="text-xs text-slate-400">Solid algorithmic thinking, STL data structures, and automation scripting.</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <h3 class="text-base font-semibold text-white mb-1">Next.js & React</h3>
+          <p class="text-xs text-slate-400">Modular component development, responsive design, and state management.</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <h3 class="text-base font-semibold text-white mb-1">Communication</h3>
+          <p class="text-xs text-slate-400">Articulating technical trade-offs, active listening, and team collaboration.</p>
+        </div>
+        <div class="glass-card p-5 rounded-2xl">
+          <h3 class="text-base font-semibold text-white mb-1">Git & Vercel</h3>
+          <p class="text-xs text-slate-400">Version control branching strategies, PR reviews, and fast cloud hosting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-slate-900/40 border-y border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-semibold uppercase tracking-wider text-sky-400 bg-sky-950/60 border border-sky-800/40 px-3 py-1 rounded-full">Proficiencies</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">Skills & <span class="gradient-text">Expertise</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">C++</span>
+            <span class="text-xs font-semibold text-indigo-300 bg-indigo-950 px-2 py-0.5 rounded-full border border-indigo-800/50">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Object-Oriented Programming, Standard Template Library (STL), memory management, algorithms, and complexity optimization.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">Python</span>
+            <span class="text-xs font-semibold text-sky-300 bg-sky-950 px-2 py-0.5 rounded-full border border-sky-800/50">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Automation scripting, file processing, data transformation, algorithmic challenges, and fast prototyping.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">Next.js & React</span>
+            <span class="text-xs font-semibold text-teal-300 bg-teal-950 px-2 py-0.5 rounded-full border border-teal-800/50">Proficient</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Component-based UI, App Router, responsive page architecture, and seamless client-side interactivity.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">CSS & Responsive Layouts</span>
+            <span class="text-xs font-semibold text-indigo-300 bg-indigo-950 px-2 py-0.5 rounded-full border border-indigo-800/50">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Tailwind CSS, Flexbox, CSS Grid, mobile-first layouts, dark mode, and modern glassmorphic aesthetics.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">Git, GitHub & Vercel</span>
+            <span class="text-xs font-semibold text-emerald-300 bg-emerald-950 px-2 py-0.5 rounded-full border border-emerald-800/50">Advanced</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Version control, feature branching, code reviews, and automatic deployment pipeline to Vercel edge network.</p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-lg font-bold text-white">Communication & Soft Skills</span>
+            <span class="text-xs font-semibold text-amber-300 bg-amber-950 px-2 py-0.5 rounded-full border border-amber-800/50">Expert</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">Verbal and written communication, explaining complex technical concepts with clarity, collaboration, and adaptability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-800/40 px-3 py-1 rounded-full">Portfolio</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">Featured <span class="gradient-text">Projects</span></h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Project 1 -->
+      <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-indigo-400 bg-indigo-950/60 px-2.5 py-1 rounded-md">C++ / Algorithms</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2">High-Performance Algorithm Suite</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            A modular library of fundamental and advanced algorithms implemented in modern C++ with low memory overhead, cache-friendly data structures, and STL mastery.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">C++</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">STL</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Data Structures</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Git</span>
+          </div>
+        </div>
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold text-center transition-colors">
+          View on GitHub →
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-sky-400 bg-sky-950/60 px-2.5 py-1 rounded-md">Python / Automation</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2">Python Automation & Data Processing Hub</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            A versatile suite of automated utilities and data processors built in Python to batch-clean datasets, parse unstructured files, and automate recurring workflows.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Python</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Automation</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">File I/O</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">CLI</span>
+          </div>
+        </div>
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold text-center transition-colors">
+          View on GitHub →
+        </a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-teal-400 bg-teal-950/60 px-2.5 py-1 rounded-md">Next.js / React</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2">Modern Developer Portfolio Platform</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            A fast, responsive web application engineered with Next.js App Router, Tailwind CSS, Lucide React, and configured for seamless deployment on Vercel.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Next.js</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">React</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Tailwind CSS</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">Vercel</span>
+          </div>
+        </div>
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold text-center transition-colors">
+          View Repository →
+        </a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="glass-card p-7 rounded-2xl flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono text-violet-400 bg-violet-950/60 px-2.5 py-1 rounded-md">React / Web UI</span>
+          <h3 class="text-xl font-bold text-white mt-3 mb-2">Interactive Quiz & Problem Solving Portal</h3>
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            A reactive web application providing technical quizzes and problem-solving exercises in C++ and Python with instant score tracking and feedback.
+          </p>
+          <div class="flex flex-wrap gap-1.5 mb-6">
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">React</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">JavaScript</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs font-mono">State Handling</span>
+          </div>
+        </div>
+        <a href="https://github.com/VigneshPAlva10" target="_blank" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold text-center transition-colors">
+          View on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-950/60 border border-indigo-800/40 px-3 py-1 rounded-full">Inquiries</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3">Get in <span class="gradient-text">Touch</span></h2>
+      </div>
+
+      <div class="max-w-2xl mx-auto glass-card p-8 rounded-2xl space-y-6">
+        <div class="text-center space-y-2">
+          <p class="text-sm text-slate-300">Feel free to connect for internships, software engineering projects, or technical conversations.</p>
+          <p class="text-base font-mono text-indigo-400 font-semibold">vigneshpalva2007@gmail.com</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <button onclick="copyEmail()" class="flex-1 py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold transition-all">
+            Copy Email Address
+          </button>
+          <a href="mailto:vigneshpalva2007@gmail.com" class="flex-1 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold text-center transition-colors border border-slate-700">
+            Send Email Directly ↗
+          </a>
+        </div>
+
+        <div class="pt-4 border-t border-slate-800 text-center">
+          <a href="https://github.com/VigneshPAlva10" target="_blank" class="text-xs text-sky-400 hover:underline">
+            View GitHub: github.com/VigneshPAlva10
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-950 border-t border-slate-800 text-center text-xs text-slate-500">
+    <p>© 2026 Vignesh P Alva. Built with Next.js, React, CSS, and Lucide Icons.</p>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 max-w-2xl w-full max-h-[85vh] rounded-2xl p-6 overflow-y-auto space-y-6 text-slate-200">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h2 class="text-2xl font-bold text-white">Vignesh P Alva</h2>
+          <p class="text-xs text-indigo-400">Software Developer (C++, Python, Next.js, React)</p>
+        </div>
+        <button onclick="toggleResumeModal(false)" class="p-2 text-slate-400 hover:text-white">✕</button>
+      </div>
+
+      <div class="space-y-4 text-xs">
+        <div>
+          <h3 class="font-bold text-indigo-400 uppercase tracking-wider mb-1">Contact</h3>
+          <p>Email: vigneshpalva2007@gmail.com | GitHub: github.com/VigneshPAlva10</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-indigo-400 uppercase tracking-wider mb-1">Technical Skills</h3>
+          <p><strong>Languages:</strong> C++, Python, JavaScript</p>
+          <p><strong>Frameworks & Web:</strong> Next.js, React, CSS3, Tailwind CSS</p>
+          <p><strong>Tools:</strong> Git, GitHub, Vercel, VS Code</p>
+          <p><strong>Soft Skills:</strong> Clear Technical Communication, Problem Solving, Team Collaboration</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-indigo-400 uppercase tracking-wider mb-1">Projects</h3>
+          <p><strong>High-Performance Algorithm Suite:</strong> C++, STL, Graph Traversals, Benchmarked Memory.</p>
+          <p><strong>Python Automation Hub:</strong> File Parsing, Batch CSV/JSON Transformation, CLI scripts.</p>
+          <p><strong>Next.js Portfolio:</strong> React, Responsive UI, Lucide Icons, Vercel Deployment.</p>
+        </div>
+      </div>
+
+      <div class="flex justify-end gap-2 pt-4 border-t border-slate-800">
+        <button onclick="window.print()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg text-xs font-semibold">Print / Save PDF</button>
+        <button onclick="toggleResumeModal(false)" class="px-4 py-2 bg-slate-800 text-slate-300 rounded-lg text-xs font-semibold">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("vigneshpalva2007@gmail.com");
+      const btn = document.getElementById("copy-btn");
+      if (btn) {
+        btn.innerText = "[Copied!]";
+        setTimeout(() => { btn.innerText = "[Copy]"; }, 2500);
+      }
+    }
+    function toggleResumeModal(show) {
+      const modal = document.getElementById("resume-modal");
+      if (modal) {
+        if (show) modal.classList.remove("hidden");
+        else modal.classList.add("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
